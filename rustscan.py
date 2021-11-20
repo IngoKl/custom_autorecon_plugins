@@ -17,7 +17,7 @@ class QuickRustScanScan(PortScan):
         if target.ports: # Don't run this plugin if there are custom ports.
             return []
 
-        process, stdout, stderr = await target.execute('rustscan -a {address} -g --ulimit 5000 > "{scandir}/_quick_rustscan.txt"', blocking=False)
+        process, stdout, stderr = await target.execute('rustscan -a {address} -g -t 10000 --ulimit 5000 > "{scandir}/_quick_rustscan.txt"', blocking=False)
         services = await target.extract_services(stdout)
         await process.wait()
         return services
