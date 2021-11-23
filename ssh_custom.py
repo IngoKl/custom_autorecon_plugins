@@ -7,7 +7,7 @@ class SSHAudit(ServiceScan):
         self.name = 'ssh-audit'
         self.description = 'Runs ssh-audit against the target.'
         self.type = 'tcp'
-        self.tags = ['community', 'ssh', 'safe']
+        self.tags = ['default', 'community', 'ssh', 'safe']
 
     def configure(self):
         self.match_service_name('ssh')

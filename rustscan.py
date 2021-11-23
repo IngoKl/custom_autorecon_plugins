@@ -10,7 +10,7 @@ class QuickRustScanScan(PortScan):
         self.name = 'Quick RustScan'
         self.description = 'Performs a basic RustScan scan.'
         self.type = 'tcp'
-        self.tags = ['community', 'additional-port-scan']
+        self.tags = ['default', 'community', 'additional-port-scan']
         self.priority = 0
 
     async def run(self, target):
