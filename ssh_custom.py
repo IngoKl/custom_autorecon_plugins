@@ -13,5 +13,5 @@ class SSHAudit(ServiceScan):
         self.match_service_name('ssh')
 
     async def run(self, service):
-        cmd = 'ssh-audit -p {port} {address} > {scandir}/{protocol}_{port}_ssh-audit.txt'
+        cmd = 'ssh-audit -n -p {port} {address} > {scandir}/{protocol}_{port}_ssh-audit.txt'
         await service.execute(cmd)
