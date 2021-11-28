@@ -4,6 +4,7 @@ This is a small collection of my (public) plugins for Tib3rius' fantastic [AutoR
 
 * `rustscan.py` -> QuickRustScanScan
 * `ssh_custom.py` -> SSHAudit
+* `ftp_custom.py` -> FTPBasicEnumeration
 
 ## Additional Requirements
 
@@ -12,6 +13,7 @@ In addition to `AutoRecon` and all its requirements, you will need:
 ```
 rustscan
 ssh-audit
+basic-ftp-enumeration.py
 ```
 
 ## Usage
